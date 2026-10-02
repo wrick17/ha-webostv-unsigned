@@ -6,7 +6,7 @@ from collections.abc import Mapping
 from typing import Any, Self
 from urllib.parse import urlparse
 
-from aiowebostv import WebOsClient, WebOsTvPairError
+from aiowebostv import WebOsTvPairError
 import voluptuous as vol
 
 from homeassistant.config_entries import (
@@ -25,6 +25,7 @@ from homeassistant.helpers.service_info.ssdp import (
 )
 
 from . import WebOsTvConfigEntry
+from .client import WebOsClient
 from .const import CONF_SOURCES, DEFAULT_NAME, DOMAIN, WEBOSTV_EXCEPTIONS
 from .helpers import get_sources
 
